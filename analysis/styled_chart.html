@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.14.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300, "fill": "#000", "strokeWidth": 0}}, "data": {"name": "data-ccbfe765514566e285663881d7d89bfd"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "Count", "scale": {"scheme": "plasma"}, "type": "quantitative"}, "tooltip": [{"field": "LocState", "type": "nominal"}, {"field": "Count", "type": "quantitative"}], "x": {"field": "Count", "title": "Number of Cell Towers", "type": "quantitative"}, "y": {"field": "LocState", "sort": "-x", "title": "State", "type": "nominal"}}, "height": 800, "params": [{"name": "param_1", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales"}], "title": "Number of Cell Towers per State", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.14.1.json", "datasets": {"data-ccbfe765514566e285663881d7d89bfd": [{"LocState": "AK", "Count": 924}, {"LocState": "AL", "Count": 943}, {"LocState": "AR", "Count": 936}, {"LocState": "AS", "Count": 10}, {"LocState": "AZ", "Count": 878}, {"LocState": "CA", "Count": 2145}, {"LocState": "CO", "Count": 962}, {"LocState": "CT", "Count": 219}, {"LocState": "DC", "Count": 3}, {"LocState": "DE", "Count": 76}, {"LocState": "FL", "Count": 1798}, {"LocState": "GA", "Count": 1322}, {"LocState": "GM", "Count": 158}, {"LocState": "GU", "Count": 20}, {"LocState": "HI", "Count": 104}, {"LocState": "IA", "Count": 1277}, {"LocState": "ID", "Count": 516}, {"LocState": "IL", "Count": 1313}, {"LocState": "IN", "Count": 1117}, {"LocState": "KS", "Count": 1070}, {"LocState": "KY", "Count": 1382}, {"LocState": "LA", "Count": 1202}, {"LocState": "MA", "Count": 252}, {"LocState": "MD", "Count": 369}, {"LocState": "ME", "Count": 424}, {"LocState": "MI", "Count": 1402}, {"LocState": "MN", "Count": 1142}, {"LocState": "MO", "Count": 1374}, {"LocState": "MP", "Count": 21}, {"LocState": "MS", "Count": 928}, {"LocState": "MT", "Count": 754}, {"LocState": "NC", "Count": 1474}, {"LocState": "ND", "Count": 562}, {"LocState": "NE", "Count": 650}, {"LocState": "NH", "Count": 290}, {"LocState": "NJ", "Count": 316}, {"LocState": "NM", "Count": 828}, {"LocState": "NV", "Count": 480}, {"LocState": "NY", "Count": 1264}, {"LocState": "OH", "Count": 1391}, {"LocState": "OK", "Count": 1246}, {"LocState": "OR", "Count": 672}, {"LocState": "PA", "Count": 1070}, {"LocState": "PR", "Count": 149}, {"LocState": "RI", "Count": 48}, {"LocState": "SC", "Count": 763}, {"LocState": "SD", "Count": 636}, {"LocState": "TN", "Count": 1183}, {"LocState": "TX", "Count": 3720}, {"LocState": "UM", "Count": 2}, {"LocState": "UT", "Count": 446}, {"LocState": "VA", "Count": 1172}, {"LocState": "VI", "Count": 26}, {"LocState": "VT", "Count": 136}, {"LocState": "WA", "Count": 1006}, {"LocState": "WI", "Count": 1626}, {"LocState": "WV", "Count": 476}, {"LocState": "WY", "Count": 656}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
