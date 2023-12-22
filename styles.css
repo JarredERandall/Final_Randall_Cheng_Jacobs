@@ -1,1 +1,30 @@
-/* css styles */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+ /*------------- Whole Document---------------- */
+
+body {
+    font-family: 'Helvetica Neue';
+    font-size: 14px;
+}
+
+/*----------LOGO above TOC---------*/
+
+#TOC::before {
+  content: "";
+  display: block;
+  height: 200px;
+  margin: 20px 20px 40px 20px;
+  background-image: url("logo.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/*------------Table of Contents (TOC)----------- */
+
+
+.tocify {
+  border: none;   /*Removes border */
+  border-radius: 0px; /* Gets rid of rounded corners on TOC */
+  font-size: 16px;
+}
