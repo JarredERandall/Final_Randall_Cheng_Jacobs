@@ -6,8 +6,8 @@ project:
 
 website:
   title: "Exploring Digital Equity"
-  site-url: "https://github.com/JarredERandall/Final_Randall_Cheng_Jacobs" 
-  repo-url: https://github.com/JarredERandall/Final_Randall_Cheng_Jacobs
+  site-url: "https://musa-550-fall-2023.github.io/Final_Randall_Cheng_Jacobs" 
+  repo-url: "musa-550-fall-2023.github.io/Final_Randall_Cheng_Jacobs" 
   repo-actions: [source]
 
   page-footer:
