@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Us",
+    "section": "",
+    "text": "Hi! We’re Stephanie, Jarred, and Alec–three graduate students of the Weitzman School of Design at the University of Pennsylvania, studying City Planning and Urban Spatial Analytics. This website and urban data analysis is our final project for the MUSA550 Geospatial Data Science in Python class with our amazing instructor Nick Hand. Click below the analysis tab at the left to look at our project findings."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Exploring Digital Equity Through Cell Tower Data",
+    "section": "",
+    "text": "As the world continually modernizes, the “digital divide” - a term describing disparity in access to technology - persists, placing certain groups at a distinct disadvantage. In particular, the recent global pandemic shed light on the inequality of digital access worldwide. Due to a substantial reliance on the internet for communication by a significant portion of the global population, individuals without access experienced even greater social and mental burdens during the pandemic. As a result, our team sought out to understand the varied digital equity landscape at the international, federal, and state levels through geospatial data analysis. In our project, we followed a set of guiding questions:\n\nWhat international metrics may inform digital equity in developed vs developing countries?\nIs there equitable access of ICT technology across the United States?\nHow does the digital divide persist in rural vs urban areas at various scales?\n\nA large part of the conversation about resolving the digital divide focuses on Information and Communications Technology (ICT) as well as telecommunications availability. As a result, we selected our main data source - a cell tower location database provided by OpenCellID. Managed by Unwired Labs, this collaborative initiative aggregates data from registered contributors. Devices utilizing wireless networks associated with cell towers collect unique location area information, primarily sourced from smartphones through apps like OpenCellID or OpenCellID Client. Information is also collected with commercial tracking devices and corporate wholesale data donation. The data is then collected/transferred to the OpenCellID API database, available for free access."
+  },
+  {
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
+    "title": "Exploring Digital Equity Through Cell Tower Data",
+    "section": "",
+    "text": "As the world continually modernizes, the “digital divide” - a term describing disparity in access to technology - persists, placing certain groups at a distinct disadvantage. In particular, the recent global pandemic shed light on the inequality of digital access worldwide. Due to a substantial reliance on the internet for communication by a significant portion of the global population, individuals without access experienced even greater social and mental burdens during the pandemic. As a result, our team sought out to understand the varied digital equity landscape at the international, federal, and state levels through geospatial data analysis. In our project, we followed a set of guiding questions:\n\nWhat international metrics may inform digital equity in developed vs developing countries?\nIs there equitable access of ICT technology across the United States?\nHow does the digital divide persist in rural vs urban areas at various scales?\n\nA large part of the conversation about resolving the digital divide focuses on Information and Communications Technology (ICT) as well as telecommunications availability. As a result, we selected our main data source - a cell tower location database provided by OpenCellID. Managed by Unwired Labs, this collaborative initiative aggregates data from registered contributors. Devices utilizing wireless networks associated with cell towers collect unique location area information, primarily sourced from smartphones through apps like OpenCellID or OpenCellID Client. Information is also collected with commercial tracking devices and corporate wholesale data donation. The data is then collected/transferred to the OpenCellID API database, available for free access."
+  },
+  {
+    "objectID": "analysis/1-Developing-vs-Developed-Countries.html",
+    "href": "analysis/1-Developing-vs-Developed-Countries.html",
+    "title": "Part 1 - Global Cell Tower Insights: Mapping, Networks, and Country Metrics",
+    "section": "",
+    "text": "import warnings\nwarnings.filterwarnings(\"ignore\")\n#warnings.filterwarnings(\"default\")\nimport logging\nlogging.getLogger('numba.core.byteflow').setLevel(logging.WARNING)\nlogging.getLogger(\"fsspec\").setLevel(logging.WARNING)\n# Data analysis\nimport geopandas as gpd\nimport numpy as np\nimport pandas as pd\nimport intake\nimport dask\nfrom shapely.geometry import Point\n\n# Plotting\nimport seaborn as sns\nfrom matplotlib import pyplot as plt\nimport altair as alt\nimport holoviews as hv\nimport hvplot.pandas\nimport geoviews as gv\nimport geoviews.tile_sources as gvts\nimport datashader as ds\nimport datashader.transfer_functions as tf\nfrom datashader.colors import Greys9, viridis, inferno\nfrom colorcet import fire, kgy, CET_CBL3\n\n# Sci-Kit Learn\nfrom sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler\nfrom sklearn.cluster import KMeans\n\npd.options.display.max_columns = 999"
+  },
+  {
+    "objectID": "analysis/1-Developing-vs-Developed-Countries.html#sources",
+    "href": "analysis/1-Developing-vs-Developed-Countries.html#sources",
+    "title": "Part 1 - Global Cell Tower Insights: Mapping, Networks, and Country Metrics",
+    "section": "Sources",
+    "text": "Sources\n\nOpenCellID\nWorld Bank"
+  },
+  {
+    "objectID": "analysis/2-United-States-Cell-Tower-Distribution.html",
+    "href": "analysis/2-United-States-Cell-Tower-Distribution.html",
+    "title": "Part 2 - A Close Look Into America’s Cellular Landscape",
+    "section": "",
+    "text": "# Data analysis\nimport geopandas as gpd\nimport numpy as np\nimport pandas as pd\nfrom shapely.geometry import Point\n\n# Plotting\nimport folium\nimport matplotlib.pyplot as plt\nimport matplotlib.colors\nimport seaborn as sns\nfrom matplotlib import pyplot as plt\nimport matplotlib.colors\nfrom matplotlib.patches import Patch\nimport altair as alt\nimport holoviews as hv\nimport hvplot.pandas\nimport geoviews as gv\nimport geoviews.tile_sources as gvts\nimport datashader as ds\nimport datashader.transfer_functions as tf\nfrom datashader.colors import Greys9, viridis, inferno\nimport colorcet as cc\n\n\npd.options.display.max_columns = 999\nimport warnings\nwarnings.filterwarnings(\"ignore\")\n#warnings.filterwarnings(\"default\")\nimport logging\nlogging.getLogger('numba.core.byteflow').setLevel(logging.WARNING)\nlogging.getLogger(\"fsspec\").setLevel(logging.WARNING)"
+  },
+  {
+    "objectID": "analysis/2-United-States-Cell-Tower-Distribution.html#sources",
+    "href": "analysis/2-United-States-Cell-Tower-Distribution.html#sources",
+    "title": "Part 2 - A Close Look Into America’s Cellular Landscape",
+    "section": "Sources",
+    "text": "Sources\n\nOpenCellID\nFederal Communications Commission (FCC)"
+  },
+  {
+    "objectID": "analysis/3-Rural-vs-Urban.html",
+    "href": "analysis/3-Rural-vs-Urban.html",
+    "title": "Part 3 - Rural vs Urban Cellular Connectivity Analysis",
+    "section": "",
+    "text": "Expanding rural broadband and cellular connectivity in Pennsylvania is an urgent necessity, highlighted by the current digital divide affecting over 330,000 households - mainly in rural areas. The lack of reliable internet and cellular access is seen as a significant setback, impacting education, telework, and access to vital information, especially during crises. Despite the recent allocation of $1.5 billion through federal acts, challenges such as a skilled workforce shortage and bureaucratic roadblocks pose obstacles. Our first step involves depicting rural and urban counties in Pennsylvania based on population density, aimed at providing a base for comprehending the digital divide. The Center For Rural Pennsylvania defines rural areas as those with fewer than 291 people per square mile. Pennsylvania comprises 48 rural counties and 19 urban counties according to this classification. This visualization, coupled with a second map, serves to highlight the imperative for collaborative efforts between the government and the private sector - prioritizing comprehensive connectivity, treating it with the urgency as critical infrastructure development.\n\nimport warnings\nwarnings.filterwarnings(\"ignore\")\n#warnings.filterwarnings(\"default\")\nimport logging\nlogging.getLogger('numba.core.byteflow').setLevel(logging.WARNING)\nlogging.getLogger(\"fsspec\").setLevel(logging.WARNING)\n\n\nimport geopandas as gpd\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\n# The Center for Rural Pennsylvania's definition of rural and urban is based on population density. \n# Population density is calculated by dividing the total population of a specific area by the total number of square land miles of that area.\n\n# Load the shapefile\nshapefile_path = './Data/PABoundaries_PY.shp'\ngdf = gpd.read_file(shapefile_path)\n\n# Load the CSV file\ncsv_path = './Data/RuralUrban_PY.csv'\ncsv_data = pd.read_csv(csv_path)\n\n# Merge the shapefile and CSV data on the \"Name\" column\nmerged_data = gdf.merge(csv_data, on='Name')\n\n# Create a choropleth map\nfig, ax = plt.subplots(1, 1, figsize=(10, 10))\nmerged_data.plot(column='Municipal', cmap='coolwarm', linewidth=0.8, ax=ax, edgecolor='0.8', legend=True)\n\n# Customize the map\nax.set_title('Classification in Pennsylvania', fontdict={'fontsize': '15', 'fontweight' : '3'})\nax.set_axis_off()\nax.get_legend().set_bbox_to_anchor((1, 1))\n\n# Show the map\nplt.show()"
+  },
+  {
+    "objectID": "analysis/3-Rural-vs-Urban.html#sources",
+    "href": "analysis/3-Rural-vs-Urban.html#sources",
+    "title": "Part 3 - Rural vs Urban Cellular Connectivity Analysis",
+    "section": "Sources",
+    "text": "Sources\n\nOpenCellID\nCenter For Rural Pennsylvania\nPennsylvania Spatial Data Access\nUnited States Census Bureau"
+  },
+  {
+    "objectID": "conclusion.html",
+    "href": "conclusion.html",
+    "title": "Conclusion",
+    "section": "",
+    "text": "Overall, our project titled, “Exploring Digital Equity Through Cell Tower Data,” conducted a comprehensive analysis of global, national, and state-level cellular landscapes to uncover observations into the digital divide. The project focused on understanding disparities in access to information and communication technology (ICT) and telecommunications infrastructure. The analysis can be categorized into three main parts: Global Cell Tower Insights, A Close Look Into America’s Cellular Landscape, and Rural vs Urban Cellular Connectivity.\nWe ended up providing a worldwide overview of cell tower distribution, revealing concentrations in developed regions and disparities in less economically developed areas. The analysis emphasized the correlation between cell tower technology and a country’s developmental status, showcasing technology’s role in economic advancement. Lastly, the subsequent sections focused on America’s cellular landscape, highlighting uneven tower distribution and the dominance of major companies. We also addressed the rural-urban digital divide using Pennsylvania and Brazil as case studies, emphasizing the need for comprehensive connectivity and infrastructure to ensure societal inclusivity.\nIn conclusion, our project successfully explored digital equity through cell tower data at multiple levels. The analysis not only provided a global understanding of technology distribution but also examined into the complexity of cellular landscapes in the United States and the challenges faced by rural areas. The project’s use of geospatial data science and analysis showcased the power of data science in uncovering patterns, correlations, and disparities related to cellular infrastructure. Ultimately, the findings contribute valuable insights to the ongoing conversation about bridging the digital divide and ensuring equitable access to technology on a global scale. :::\n:::"
+  }
+]

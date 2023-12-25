@@ -1,0 +1,14 @@
+---
+title: "Exploring Digital Equity Through Cell Tower Data"
+subtitle: "Analysis by Stephanie Cheng, Jarred Randall, Alec Jacobs"
+---
+
+## Introduction
+
+As the world continually modernizes, the "digital divide" - a term describing disparity in access to technology - persists, placing certain groups at a distinct disadvantage. In particular, the recent global pandemic shed light on the inequality of digital access worldwide. Due to a substantial reliance on the internet for communication by a significant portion of the global population, individuals without access experienced even greater social and mental burdens during the pandemic. As a result, our team sought out to understand the varied digital equity landscape at the international, federal, and state levels through geospatial data analysis. In our project, we followed a set of guiding questions:
+
+- What international metrics may inform digital equity in developed vs developing countries?
+- Is there equitable access of ICT technology across the United States?
+- How does the digital divide persist in rural vs urban areas at various scales?
+
+A large part of the conversation about resolving the digital divide focuses on Information and Communications Technology (ICT) as well as telecommunications availability. As a result, we selected our main data source - a cell tower location database provided by [OpenCellID](https://opencellid.com). Managed by [Unwired Labs](https://unwiredlabs.com), this collaborative initiative aggregates data from registered contributors. Devices utilizing wireless networks associated with cell towers collect unique location area information, primarily sourced from smartphones through apps like OpenCellID or OpenCellID Client. Information is also collected with commercial tracking devices and corporate wholesale data donation. The data is then collected/transferred to the OpenCellID API database, available for free access.
